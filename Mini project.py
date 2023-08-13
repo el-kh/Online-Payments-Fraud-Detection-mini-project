@@ -11,6 +11,8 @@ from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeClassifier
 
 df = pd.read_csv("PS_20174392719_1491204439457_log.csv")
+#the csv file is downloaded from the following site: https://www.kaggle.com/datasets/ealaxi/paysim1?resource=download
+#As the file was of a too large size, I put the download link here. When checking, please put in pd.read_csv your path
 
 
 # In[29]:
@@ -52,9 +54,6 @@ accuracy = model.score(X_test, y_test)
 fraud_status = "Fraud" if predicted_fraud[0] == 1 else "Not Fraud"
 print("Predicted Transaction Status:", fraud_status)
 print("Accuracy:", accuracy)
-
-
-# In[ ]:
 
 
 
